@@ -11,8 +11,9 @@ let verificaToken = (req, res, next) => {
             return res.status(401).json({
                 ok: false,
                 err: {
-                    messaje: 'Token no válido'
-                }
+                    messaje: 'Token no válidos'
+                },
+
             })
         }
         req.usuario = decoded.Usuario;
